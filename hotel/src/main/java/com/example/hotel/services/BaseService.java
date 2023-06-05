@@ -18,11 +18,11 @@ public abstract class BaseService<TModel> {
         return repo.findAll();
     }
 
-    public List<TModel> getById(Integer id){
+    public TModel getById(Integer id){
         Optional<TModel> opt = repo.findById(id);
         List<TModel> res = new ArrayList<>();
         opt.ifPresent(res::add);
-        return res;
+        return res.get(0);
     }
 
     public void saveEntity(TModel entity){

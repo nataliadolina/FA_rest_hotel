@@ -14,11 +14,11 @@ public class RoomsController {
     private RoomsService service;
 
     @GetMapping("")
-    public List<Room> allBookings(){
+    public List<Room> allRooms(){
         return service.getAll();
     }
     @GetMapping("/{id}")
-    public List<Room> booking(@PathVariable(value = "id") Integer id){
+    public Room room(@PathVariable(value = "id") Integer id){
         return service.getById(id);
     }
 

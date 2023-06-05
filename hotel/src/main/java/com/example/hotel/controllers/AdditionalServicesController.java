@@ -14,11 +14,11 @@ public class AdditionalServicesController {
     private AdditionalServicesService service;
 
     @GetMapping("")
-    public List<AdditionalServices> allBookings(){
+    public List<AdditionalServices> allAdditionalServices(){
         return service.getAll();
     }
     @GetMapping("/{id}")
-    public List<AdditionalServices> booking(@PathVariable(value = "id") Integer id){
+    public AdditionalServices additionalService(@PathVariable(value = "id") Integer id){
         return service.getById(id);
     }
 

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="424.0" prefWidth="345.0" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelfrontend.CreateBookingController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <Label prefHeight="17.0" prefWidth="219.0" text="Pick up arrival date" />
+                <DatePicker id="arrival_date" fx:id="arrival_date" onAction="#onArrivalDateChanged" prefHeight="25.0" prefWidth="312.0" />
+            </children>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <Label prefHeight="17.0" prefWidth="223.0" text="Pick up departure date" />
+                <DatePicker id="departure_date" fx:id="departure_date" onAction="#onDepartureDateChanged" prefHeight="25.0" prefWidth="312.0" />
+            </children>
+        </VBox>
+        <VBox prefHeight="43.0" prefWidth="184.0">
+            <children>
+                <Label prefHeight="17.0" prefWidth="337.0" text="Choose room." />
+            <Label prefHeight="17.0" prefWidth="317.0" text="To see available rooms, choos arrival and departure date." />
+                <ChoiceBox id="room" fx:id="room" onAction="#roomChanged" prefHeight="25.0" prefWidth="325.0" />
+            </children>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <Label prefHeight="17.0" prefWidth="317.0" text="Choose client" />
+                <ChoiceBox id="client" fx:id="client" prefHeight="25.0" prefWidth="325.0" />
+            </children>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <Label prefHeight="17.0" prefWidth="329.0" text="Choose additional services" />
+                <ChoiceBox id="additional_services" fx:id="additional_services" onAction="#addonsChanged" prefHeight="25.0" prefWidth="333.0" />
+            </children>
+        </VBox>
+        <HBox prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <Label text="Full price" />
+                <TextField id="full_price" fx:id="full_price" centerShape="false" prefHeight="25.0" prefWidth="253.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </TextField>
+            </children>
+        </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#saveButtonPushed" prefHeight="25.0" prefWidth="152.0" text="Save" />
+            <Button id="toPrimaryButton" fx:id="toPrimaryButton" mnemonicParsing="false" onAction="#toPrimaryButtonPushed" prefHeight="25.0" prefWidth="157.0" text="To primary" />
+         </children>
+      </HBox>
+    </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>
